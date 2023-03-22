@@ -1,47 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  <body
+    class="min-h-screen font-body text-[1.125rem] font-medium text-dark-gray-blue"
+  >
+    <main>
+      <div
+        class="mx-auto min-w-[375px] max-w-[560px] overflow-hidden rounded-b-3xl shadow-2xl shadow-light-lavender/50"
+      >
+        <section
+          class="rounded-b-3xl bg-gradient-to-b from-light-slate-blue to-light-royal-blue px-12 pt-5 pb-8 text-center text-light-lavender"
+        >
+          <h1>Your Result</h1>
+          <div
+            class="mx-auto my-6 grid h-[8.75rem] w-[8.75rem] content-center rounded-full bg-gradient-to-b from-violet-blue to-persian-blue"
+          >
+            <span
+              class="block text-[3.5rem] font-extrabold leading-[4.2rem] text-white"
+              >76</span
+            >
+            <span class="text-[15px] font-bold opacity-50">of 100</span>
+          </div>
+          <h2 class="text-2xl font-bold leading-10 text-pale-blue">Great</h2>
+          <p class="text-base">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </section>
 
-  Your Result
-  76
-  of 100
+        <section class="p-7">
+          <h2 class="mb-5 text-lg font-bold">Summary</h2>
+          <ul class="flex flex-col gap-4 text-base">
+            <li
+              class="flex w-full items-center rounded-md bg-light-red/5 p-4 text-light-red before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-reaction.svg')]"
+            >
+              Reaction
+              <span class="ml-auto text-dark-gray-blue/50"
+                ><span class="font-bold text-dark-gray-blue">80</span> /
+                100</span
+              >
+            </li>
+            <li
+              class="flex w-full items-center rounded-md bg-orange-yellow/5 p-4 text-orange-yellow before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-memory.svg')]"
+            >
+              Memory
+              <span class="ml-auto text-dark-gray-blue/50"
+                ><span class="font-bold text-dark-gray-blue">92</span> /
+                100</span
+              >
+            </li>
+            <li
+              class="flex w-full items-center rounded-md bg-green-teal/5 p-4 text-green-teal before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-verbal.svg')]"
+            >
+              Verbal
+              <span class="ml-auto text-dark-gray-blue/50"
+                ><span class="font-bold text-dark-gray-blue">61</span> /
+                100</span
+              >
+            </li>
+            <li
+              class="flex w-full items-center rounded-md bg-violet-blue/5 p-4 text-violet-blue before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-visual.svg')]"
+            >
+              Visual
+              <span class="ml-auto text-dark-gray-blue/50"
+                ><span class="font-bold text-dark-gray-blue">72</span> /
+                100</span
+              >
+            </li>
+          </ul>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+          <button
+            class="mt-6 w-full rounded-full bg-dark-gray-blue from-light-slate-blue to-light-royal-blue p-4 text-base font-bold text-white hover:bg-gradient-to-b"
+          >
+            Continue
+          </button>
+        </section>
+      </div>
+    </main>
 
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer
+      class="text-dark-500 mt-5 h-[20px] w-screen px-2 text-center text-sm lg:fixed lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2"
+    >
+      Challenge by
+      <a
+        class="underline"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a class="underline" href="https://github.com/AGutierrezR"
+        >Andres Gutierrez</a
+      >.
+    </footer>
+  </body>
 </html>
