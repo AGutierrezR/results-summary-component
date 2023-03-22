@@ -15,36 +15,44 @@
   </head>
 
   <body
-    class="min-h-screen font-body text-[1.125rem] font-medium text-dark-gray-blue"
+    class="min-h-screen font-body text-lg font-medium text-dark-gray-blue md:flex md:items-center md:justify-center"
   >
     <main>
       <div
-        class="mx-auto min-w-[375px] max-w-[560px] overflow-hidden rounded-b-3xl shadow-2xl shadow-light-lavender/50"
+        class="mx-auto min-w-[375px] max-w-[560px] overflow-hidden rounded-b-3xl md:grid md:max-w-[736px] md:grid-cols-2 md:shadow-2xl md:shadow-light-lavender/75"
       >
         <section
-          class="rounded-b-3xl bg-gradient-to-b from-light-slate-blue to-light-royal-blue px-12 pt-5 pb-8 text-center text-light-lavender"
+          class="rounded-b-3xl bg-gradient-to-b from-light-slate-blue to-light-royal-blue px-12 pt-5 pb-8 text-center text-light-lavender md:rounded-3xl md:px-14 md:pt-9 md:pb-11"
         >
-          <h1>Your Result</h1>
+          <h1 class="md:text-2xl md:font-bold">Your Result</h1>
           <div
-            class="mx-auto my-6 grid h-[8.75rem] w-[8.75rem] content-center rounded-full bg-gradient-to-b from-violet-blue to-persian-blue"
+            class="mx-auto my-6 grid h-[8.75rem] w-[8.75rem] content-center rounded-full bg-gradient-to-b from-violet-blue to-persian-blue md:mb-9 md:h-[200px] md:w-[200px]"
           >
             <span
-              class="block text-[3.5rem] font-extrabold leading-[4.2rem] text-white"
+              class="block text-[3.5rem] font-extrabold leading-[4.2rem] text-white md:text-7xl"
               >76</span
             >
-            <span class="text-[15px] font-bold opacity-50">of 100</span>
+            <span class="text-[15px] font-bold opacity-50 md:text-lg"
+              >of 100</span
+            >
           </div>
-          <h2 class="text-2xl font-bold leading-10 text-pale-blue">Great</h2>
-          <p class="text-base">
+          <h2
+            class="4 text-2xl font-bold leading-10 text-pale-blue md:mb-5 md:text-4xl"
+          >
+            Great
+          </h2>
+          <p class="text-base md:text-lg">
             You scored higher than 65% of the people who have taken these tests.
           </p>
         </section>
 
-        <section class="p-7">
-          <h2 class="mb-5 text-lg font-bold">Summary</h2>
-          <ul class="flex flex-col gap-4 text-base">
+        <section
+          class="p-7 md:rounded-l-3xl md:px-10 md:py-11 md:pt-9 md:pb-11"
+        >
+          <h2 class="mb-5 text-lg font-bold md:mb-6 md:text-2xl">Summary</h2>
+          <ul class="flex flex-col gap-4 text-base md:text-lg">
             <li
-              class="flex w-full items-center rounded-md bg-light-red/5 p-4 text-light-red before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-reaction.svg')]"
+              class="flex w-full items-center rounded-md bg-light-red/5 p-4 text-light-red before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-reaction.svg')] md:leading-6"
             >
               Reaction
               <span class="ml-auto text-dark-gray-blue/50"
@@ -53,7 +61,7 @@
               >
             </li>
             <li
-              class="flex w-full items-center rounded-md bg-orange-yellow/5 p-4 text-orange-yellow before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-memory.svg')]"
+              class="flex w-full items-center rounded-md bg-orange-yellow/5 p-4 text-orange-yellow before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-memory.svg')] md:leading-6"
             >
               Memory
               <span class="ml-auto text-dark-gray-blue/50"
@@ -62,7 +70,7 @@
               >
             </li>
             <li
-              class="flex w-full items-center rounded-md bg-green-teal/5 p-4 text-green-teal before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-verbal.svg')]"
+              class="flex w-full items-center rounded-md bg-green-teal/5 p-4 text-green-teal before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-verbal.svg')] md:leading-6"
             >
               Verbal
               <span class="ml-auto text-dark-gray-blue/50"
@@ -71,7 +79,7 @@
               >
             </li>
             <li
-              class="flex w-full items-center rounded-md bg-violet-blue/5 p-4 text-violet-blue before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-visual.svg')]"
+              class="flex w-full items-center rounded-md bg-violet-blue/5 p-4 text-violet-blue before:mr-3 before:leading-[0] before:content-[url('/assets/images/icon-visual.svg')] md:leading-6"
             >
               Visual
               <span class="ml-auto text-dark-gray-blue/50"
@@ -82,7 +90,7 @@
           </ul>
 
           <button
-            class="mt-6 w-full rounded-full bg-dark-gray-blue from-light-slate-blue to-light-royal-blue p-4 text-base font-bold text-white hover:bg-gradient-to-b"
+            class="mt-6 w-full rounded-full bg-dark-gray-blue from-light-slate-blue to-light-royal-blue p-4 text-base font-bold text-white hover:bg-gradient-to-b md:mt-11"
           >
             Continue
           </button>
@@ -91,7 +99,7 @@
     </main>
 
     <footer
-      class="text-dark-500 mt-5 h-[20px] w-screen px-2 text-center text-sm lg:fixed lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2"
+      class="text-dark-500 mt-5 h-[20px] w-screen px-2 text-center text-sm md:fixed md:bottom-0 md:left-1/2 md:mt-0 md:-translate-x-1/2"
     >
       Challenge by
       <a
