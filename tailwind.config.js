@@ -1,10 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./*.html'],
+  content: ['./*.html', './assets/js/main.js'],
+  safelist: [
+    // {
+    //   pattern: /(bg)-(orange-yellow|light-red|green-teal|violet-blue)\/5/,
+    // },
+    // {
+    //   pattern: /text-(orange-yellow|light-red|green-teal|violet-blue)/,
+    // },
+    `before:content-[url('/assets/images/icon-memory.svg')]`,
+    `before:content-[url('/assets/images/icon-reaction.svg')]`,
+    `before:content-[url('/assets/images/icon-verbal.svg')]`,
+    `before:content-[url('/assets/images/icon-visual.svg')]`,
+  ],
   theme: {
     extend: {
       fontFamily: {
-        body: ['HankenGrotesk', 'san-serif']
+        body: ['HankenGrotesk', 'san-serif'],
       },
       colors: {
         'light-red': 'hsl(0, 100%, 67%)',
@@ -15,11 +27,11 @@ module.exports = {
         'light-royal-blue': 'hsl(241, 81%, 54%)',
         'violet-blue': 'hsla(256, 72%, 46%, 1)',
         'persian-blue': 'hsla(241, 72%, 46%, 0)',
-        'white': 'hsl(0, 0%, 100%)',
+        white: 'hsl(0, 0%, 100%)',
         'pale-blue': 'hsl(221, 100%, 96%)',
         'light-lavender': 'hsl(241, 100%, 89%)',
-        'dark-gray-blue': 'hsl(224, 30%, 27%)'
-      }
+        'dark-gray-blue': 'hsl(224, 30%, 27%)',
+      },
     },
   },
   plugins: [],
