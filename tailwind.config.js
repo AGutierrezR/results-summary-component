@@ -1,18 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
-  content: ['./*.html', './assets/js/main.js'],
-  safelist: [
-    // {
-    //   pattern: /(bg)-(orange-yellow|light-red|green-teal|violet-blue)\/5/,
-    // },
-    // {
-    //   pattern: /text-(orange-yellow|light-red|green-teal|violet-blue)/,
-    // },
-    `before:content-[url('/assets/images/icon-memory.svg')]`,
-    `before:content-[url('/assets/images/icon-reaction.svg')]`,
-    `before:content-[url('/assets/images/icon-verbal.svg')]`,
-    `before:content-[url('/assets/images/icon-visual.svg')]`,
-  ],
+  content: ['./*.html'],
   theme: {
     extend: {
       fontFamily: {
