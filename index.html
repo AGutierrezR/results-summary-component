@@ -64,7 +64,11 @@
                 x-bind:data-category="item.category"
                 class="flex w-full items-center rounded-md p-4 data-[category=Reaction]:bg-light-red/5 data-[category=Memory]:bg-orange-yellow/5 data-[category=Verbal]:bg-green-teal/5 data-[category=Visual]:bg-violet-blue/5 data-[category=Reaction]:text-light-red data-[category=Memory]:text-orange-yellow data-[category=Verbal]:text-green-teal data-[category=Visual]:text-violet-blue md:leading-6"
               >
-                <img class="mr-3 block" :src="item.icon" alt="" />
+                <svg class="mr-3 block w-5 h-5" fill="none">
+                  <use
+                    :href="item.icon"
+                  ></use>
+                </svg>
                 <span x-text="item.category"></span>
                 <span class="ml-auto text-dark-gray-blue/50">
                   <span
@@ -101,5 +105,6 @@
         >Andres Gutierrez</a
       >.
     </footer>
+    </svg>
   </body>
 </html>
