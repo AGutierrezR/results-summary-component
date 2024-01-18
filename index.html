@@ -20,6 +20,8 @@
   >
     <main>
       <div
+        x-data="{ summaryItems: [] }"
+        x-init="summaryItems = await (await fetch('/data.json')).json()"
         class="mx-auto min-w-[375px] max-w-[560px] overflow-hidden rounded-b-3xl md:grid md:max-w-[736px] md:grid-cols-2 md:shadow-2xl md:shadow-light-lavender/75"
       >
         <section
@@ -32,6 +34,7 @@
           >
             <span
               class="block text-[3.5rem] font-extrabold leading-[4.2rem] text-white md:text-7xl"
+              x-text="$calculateScore(summaryItems)"
               >76</span
             >
             <span class="text-[15px] font-bold opacity-50 md:text-lg"
@@ -54,8 +57,6 @@
         >
           <h2 class="mb-5 text-lg font-bold md:mb-6 md:text-2xl">Summary</h2>
           <ul
-            x-data="{ summaryItems: [] }"
-            x-init="summaryItems = await (await fetch('/data.json')).json()"
             class="flex flex-col gap-4 text-base md:text-lg"
             id="summary-list"
           >
@@ -106,5 +107,42 @@
       >.
     </footer>
     </svg>
+
+    <script>
+      /**
+       * @typedef {Object} Result
+       * @property {string} category
+       * @property {number} score
+       * @property {string} icon
+       */
+
+      const round = Math.round
+
+      /**
+       * @param {number} total 
+       * @param {Result} result
+       * @returns {number}
+       */
+      const scoreReducer = (total, { score }) => score + total
+
+      /**
+       * @param {Array} arr 
+       * @returns {boolean}
+       */
+      const isEmpty = (arr) => arr.length == 0
+
+      document.addEventListener('alpine:init', () => {
+        Alpine.magic('calculateScore', () => {
+          /**
+           * @param {Result[]} results
+           */
+          return (results) => {
+            if (isEmpty(results)) return ''
+
+            return round(results.reduce(scoreReducer, 0) / results.length)
+          }
+        })
+      })
+    </script>
   </body>
 </html>

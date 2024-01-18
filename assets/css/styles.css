@@ -515,11 +515,11 @@ video {
 .h-\[8\.75rem\] {
   height: 8.75rem;
 }
-.h-\[20px\] {
-  height: 20px;
-}
 .h-5 {
   height: 1.25rem;
+}
+.h-\[20px\] {
+  height: 20px;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -530,11 +530,11 @@ video {
 .w-full {
   width: 100%;
 }
-.w-screen {
-  width: 100vw;
-}
 .w-5 {
   width: 1.25rem;
+}
+.w-screen {
+  width: 100vw;
 }
 .min-w-\[375px\] {
   min-width: 375px;
